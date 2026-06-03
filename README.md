@@ -46,14 +46,26 @@ kubectl delete pod nginx-pod
 
 ## Pods - Modo Declarativo
 
-- Apply Pod
+- Apply Primeiro Pod
 
 ```sh
 kubectl apply -f ./primeiro-pod.yaml
 ```
 
-- Delete Pod
+- Delete Primeiro Pod
 
 ```sh
 kubectl delete -f ./primeiro-pod.yaml
+```
+
+- Apply Portal Notícias
+
+```sh
+kubectl apply -f ./portal-noticias.yaml
+```
+
+- Bash Portal Notícias
+
+```sh
+kubectl exec -it portal-noticias -- bash
 ```
