@@ -64,8 +64,38 @@ kubectl delete -f ./primeiro-pod.yaml
 kubectl apply -f ./portal-noticias.yaml
 ```
 
-- Bash Portal Notícias
+- Bash & Curl - Portal Notícias
 
 ```sh
 kubectl exec -it portal-noticias -- bash
+curl localhost
+```
+
+## Services
+
+- Apply
+
+```sh
+kubectl apply -f ./pod-1.yaml
+kubectl apply -f ./pod-2.yaml
+kubectl apply -f ./svc-pod-2.yaml
+```
+
+- Get Services
+
+```sh
+kubectl get svc
+kubectl get services
+```
+
+- Bash & Curl
+
+```sh
+kubectl exec -it pod-1 -- bash
+curl "CLUSTER-IP":80
+```
+
+```sh
+kubectl exec -it portal-noticias -- bash
+curl "CLUSTER-IP":80
 ```
