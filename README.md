@@ -38,10 +38,22 @@ kubectl describe pod nginx-pod
 kubectl edit pod nginx-pod
 ```
 
+- Delete Pod (nginx)
+
+```sh
+kubectl delete pod nginx-pod
+```
+
 ## Pods - Modo Declarativo
 
 - Apply Pod
 
 ```sh
 kubectl apply -f ./primeiro-pod.yaml
+```
+
+- Delete Pod
+
+```sh
+kubectl delete -f ./primeiro-pod.yaml
 ```
